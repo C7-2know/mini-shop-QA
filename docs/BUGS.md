@@ -13,7 +13,39 @@ This document tracks bugs and issues discovered during the automation testing of
 
 ---
 
+## Bug #1: Form Validation Inconsistency
 
+### Severity: Medium
+### Status: Found in Frontend
+
+### Description
+Form validation is inconsistent across different forms, with some fields required and others not.
+
+### Steps to Reproduce
+1. Go to checkout page
+2. Leave some fields empty
+3. Submit form
+4. Observe validation behavior
+
+### Expected Behavior
+- Consistent validation across all forms
+- Clear error messages for all required fields
+- Proper field highlighting
+
+### Actual Behavior
+- Some fields show validation errors
+- Others don't show any indication
+- Inconsistent error message styling
+
+### Impact
+- Confusing user experience
+- Inconsistent form behavior
+- Potential data submission issues
+
+### Recommendation
+Implement consistent validation across all forms with proper error handling.
+
+---
 
 ## Bug #2: Cart ID Format Inconsistency
 
@@ -226,59 +258,14 @@ Implement proper error handling with user-friendly messages and retry mechanisms
 
 ---
 
-## Bug #7: Form Validation Inconsistency
-
-### Severity: Medium
-### Status: Found in Frontend
-
-### Description
-Form validation is inconsistent across different forms, with some fields required and others not.
-
-### Steps to Reproduce
-1. Go to checkout page
-2. Leave some fields empty
-3. Submit form
-4. Observe validation behavior
-
-### Expected Behavior
-- Consistent validation across all forms
-- Clear error messages for all required fields
-- Proper field highlighting
-
-### Actual Behavior
-- Some fields show validation errors
-- Others don't show any indication
-- Inconsistent error message styling
-
-### Impact
-- Confusing user experience
-- Inconsistent form behavior
-- Potential data submission issues
-
-### Recommendation
-Implement consistent validation across all forms with proper error handling.
-
----
 
 ## Summary
 
-### Bugs Found: 7
+### Bugs Found: 6
 - **Critical**: 0
-- **High**: 1 (Order Details API)
 - **Medium**: 3 (Checkout API, Tax Calculation, Network Error Handling)
 - **Low**: 3 (Cart ID Format, Price Filter, Form Validation)
 
-### Impact Assessment
-- **Early Detection**: All bugs caught before production deployment
-- **User Experience**: Issues identified that would impact real users
-- **API Contract**: Violations discovered that would break integrations
-- **Data Integrity**: Problems found that could cause data inconsistencies
-
-### Recommendations
-1. **Immediate**: Fix the Order Details API to return actual order data
-2. **Short-term**: Implement proper error handling and validation
-3. **Long-term**: Improve API design and data consistency
-4. **Process**: Implement automated testing in CI/CD pipeline
 
 ### Test Coverage Impact
 All bugs were discovered through comprehensive test coverage, demonstrating the value of thorough automation testing in identifying both functional and non-functional issues. The automation suite provides **early warning system** for quality issues.
