@@ -5,7 +5,7 @@ A comprehensive automation testing framework for the MiniShop e-commerce applica
 ## Overview
 
 This automation suite provides **production-quality testing** for e-commerce applications with:
-- **25+ comprehensive tests** (15 API + 10 UI tests)
+- **30+ comprehensive tests** (15 API + 17 UI tests)
 - **Modern architecture** using Python + Playwright + pytest
 - **CI/CD integration** with GitHub Actions
 - **Comprehensive reporting** and bug tracking
@@ -16,7 +16,7 @@ This automation suite provides **production-quality testing** for e-commerce app
 ### Prerequisites
 
 - **Python 3.8+** with pip
-- **Node.js 18+** (for Playwright)
+- **Node.js 18+** (for Playwright and frontend)
 - **Git** for version control
 
 ### Installation & Setup
@@ -211,13 +211,10 @@ See [BUGS.md](docs/BUGS.md) for detailed analysis and reproduction steps.
 ## 🛠️ Key Features
 
 ### Reliability & Speed
-- **Parallel execution** for faster test runs
 - **Intelligent retry logic** for flaky tests
-- **Explicit waits** instead of hard sleeps
 - **Test isolation** with unique data sets
 
 ### Code Quality
-- **Page Object Model** for maintainable UI tests
 - **API client wrapper** for consistent API interaction
 - **Test data builders** for flexible data generation
 - **Comprehensive error handling** and logging
@@ -226,31 +223,6 @@ See [BUGS.md](docs/BUGS.md) for detailed analysis and reproduction steps.
 - **HTML reports** for human-readable results
 - **JUnit XML** for CI/CD integration
 - **Coverage reports** with detailed metrics
-- **Screenshots** for UI test failures
-
-## 🆘 Support & Troubleshooting
-
-### Common Issues
-
-1. **Service startup failures**
-   ```bash
-   # Check if services are running
-   curl -f http://localhost:8000/api/health
-   curl -f http://localhost:3000
-   ```
-
-2. **Test timeouts**
-   ```bash
-   # Increase timeout values
-   export PYTEST_TIMEOUT=600
-   export PLAYWRIGHT_TIMEOUT=60000
-   ```
-
-3. **Flaky tests**
-   ```bash
-   # Run with retry logic
-   pytest -v --maxfail=3 --tb=short
-   ```
 
 ### Getting Help
 
@@ -270,16 +242,5 @@ This automation suite successfully delivers:
 - ✅ **Excellent maintainability** and documentation
 - ✅ **Scalable architecture** for future growth
 
-## 📄 License
-
-This project is licensed under the MIT License - see the LICENSE file for details.
-
----
-
-**Total Development Time**: ~48 hours  
-**Test Coverage**: 25+ tests across UI and API  
-**Bugs Found**: 7 with detailed analysis  
-**Documentation**: 5 comprehensive documents  
-**CI/CD**: Full pipeline with parallel execution  
 
 **Result**: Production-ready automation suite that exceeds requirements and provides excellent value for quality assurance.
