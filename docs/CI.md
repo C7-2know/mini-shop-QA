@@ -183,7 +183,6 @@ The pipeline generates multiple report formats:
 1. **Service startup failures**: Check health check endpoints
 2. **Test timeouts**: Increase timeout values
 3. **Flaky tests**: Implement retry logic
-4. **Resource exhaustion**: Optimize parallel execution
 
 ### Debug Commands
 
@@ -208,7 +207,6 @@ The CI/CD pipeline provides:
 3. **Comprehensive reporting** with multiple output formats
 4. **Easy maintenance** with clear configuration and documentation
 5. **Scalable architecture** that can grow with the project
-6. **Bug detection** with 7 real bugs identified and documented
 
 ### Key Achievements
 - **Latest GitHub Actions** (v4/v5) avoiding deprecation warnings
