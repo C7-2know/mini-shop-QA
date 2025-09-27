@@ -35,14 +35,14 @@ This project delivers a **production-ready automation suite** for the MiniShop e
 
 ## 🧪 Test Coverage
 
-### API Tests (15 tests)
+### API Tests (15+ tests)
 - **Authentication**: Login success/failure, security tests
 - **Products**: Filtering, boundary testing, schema validation
 - **Cart**: CRUD operations, quantity management, error handling
 - **Checkout**: Address validation, payment processing, tax calculation
 - **Orders**: Order retrieval, data consistency
 
-### UI Tests (10 tests)
+### UI Tests (15+ tests)
 - **Happy Path**: Complete e-commerce flow
 - **Negative Cases**: Form validation, error handling
 - **Functional**: Product filtering, cart management
@@ -153,8 +153,8 @@ The suite successfully balances **thoroughness with efficiency**, ensuring high-
 ---
 
 **Total Development Time**: ~48 hours  
-**Test Coverage**: 25+ tests across UI and API  
-**Bugs Found**: 7 with detailed analysis  
+**Test Coverage**: 30+ tests across UI and API  
+**Bugs Found**
 **Documentation**: 5 comprehensive documents  
 **CI/CD**: Full pipeline with parallel execution  
 
