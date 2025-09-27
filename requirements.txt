@@ -8,7 +8,7 @@ pytest-asyncio
 
 # API testing
 requests
-httpx=.1
+httpx
 
 # UI testing
 playwright
