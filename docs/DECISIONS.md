@@ -14,11 +14,6 @@ This document outlines the key technical decisions made during the development o
 - **requests**: Simple, reliable HTTP client for API testing
 - **pytest**: Feature-rich testing framework with excellent reporting and fixtures
 
-**Alternatives Considered:**
-- **TypeScript + Playwright**: Rejected due to additional complexity and learning curve
-- **Java + Selenium**: Rejected due to slower execution and more complex setup
-- **Cypress**: Rejected due to limited API testing capabilities
-
 
 ## Test Architecture
 
@@ -43,15 +38,6 @@ class MiniShopAPI:
         return response.json()
 ```
 
-**Alternatives Considered:**
-- **Direct requests calls**: Rejected due to code duplication
-- **API testing framework**: Rejected due to over-engineering
-
-**Trade-offs:**
-- ✅ Consistent API interaction
-- ✅ Built-in error handling and retries
-- ❌ Additional abstraction layer
-- ❌ Learning curve for team members
 
 ## Test Data Management
 
@@ -116,17 +102,6 @@ jobs:
       - name: Run UI tests
 ```
 
-**Alternatives Considered:**
-- **Jenkins**: Rejected due to setup complexity
-- **GitLab CI**: Rejected due to GitHub integration
-- **Azure DevOps**: Rejected due to cost considerations
-
-**Trade-offs:**
-- ✅ Fast parallel execution
-- ✅ Easy GitHub integration
-- ❌ Limited customization options
-- ❌ Dependency on GitHub
-
 ## Test Reporting
 
 ### Decision: HTML + JUnit XML Reports
@@ -141,17 +116,6 @@ jobs:
 ```bash
 pytest -v --html=reports/report.html --self-contained-html --junitxml=reports/junit.xml
 ```
-
-**Alternatives Considered:**
-- **Allure**: Rejected due to additional complexity
-- **Custom reporting**: Rejected due to development overhead
-- **Console-only**: Rejected due to stakeholder needs
-
-**Trade-offs:**
-- ✅ Comprehensive reporting
-- ✅ Easy CI/CD integration
-- ❌ Additional file management
-- ❌ Limited customization
 
 
 ## Test Organization
