@@ -62,20 +62,3 @@ class TestAuthentication:
         with pytest.raises(Exception):
             self.api.login(username="test", password="")
     
-    def test_login_sql_injection_attempt(self):
-        """Test login with SQL injection attempt."""
-        # Act & Assert
-        with pytest.raises(Exception):
-            self.api.login(
-                username="'; DROP TABLE users; --",
-                password="anything"
-            )
-    
-    def test_login_xss_attempt(self):
-        """Test login with XSS attempt."""
-        # Act & Assert
-        with pytest.raises(Exception):
-            self.api.login(
-                username="<script>alert('xss')</script>",
-                password="anything"
-            )

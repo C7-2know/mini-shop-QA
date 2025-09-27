@@ -39,7 +39,7 @@ This project delivers a **production-ready automation suite** for the MiniShop e
 - **Authentication**: Login success/failure, security tests
 - **Products**: Filtering, boundary testing, schema validation
 - **Cart**: CRUD operations, quantity management, error handling
-- **Checkout**: Address validation, payment processing, tax calculation
+- **Checkout**: Address validation, payment processing
 - **Orders**: Order retrieval, data consistency
 
 ### UI Tests (15+ tests)

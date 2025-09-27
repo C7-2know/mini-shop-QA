@@ -108,3 +108,8 @@ jobs:
       with:
         name: ui-test-results
         path: reports/
+    - name: Run all tests
+    run: |
+      pytest -v --html=reports/combined-report.html --self-contained-html --junitxml=reports/combined-junit.xml -m "ui or api"
+
+    
