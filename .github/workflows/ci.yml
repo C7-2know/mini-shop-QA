@@ -16,12 +16,12 @@ jobs:
     - uses: actions/checkout@v4
     
     - name: Set up Python
-      uses: actions/setup-python@v4
+      uses: actions/setup-python@v5
       with:
         python-version: '3.8'
     
     - name: Cache pip dependencies
-      uses: actions/cache@v3
+      uses: actions/cache@v4
       with:
         path: ~/.cache/pip
         key: ${{ runner.os }}-pip-${{ hashFiles('**/requirements.txt') }}
@@ -45,7 +45,7 @@ jobs:
         pytest tests/api/ -v --html=reports/api-report.html --self-contained-html --junitxml=reports/api-junit.xml -m api
     
     - name: Upload API test results
-      uses: actions/upload-artifact@v3
+      uses: actions/upload-artifact@v4
       if: always()
       with:
         name: api-test-results
@@ -60,12 +60,12 @@ jobs:
     - uses: actions/checkout@v4
     
     - name: Set up Python
-      uses: actions/setup-python@v4
+      uses: actions/setup-python@v5
       with:
         python-version: '3.8'
     
     - name: Cache pip dependencies
-      uses: actions/cache@v3
+      uses: actions/cache@v4
       with:
         path: ~/.cache/pip
         key: ${{ runner.os }}-pip-${{ hashFiles('**/requirements.txt') }}
@@ -100,7 +100,7 @@ jobs:
         pytest ui/tests -v --html=reports/ui-report.html --self-contained-html --junitxml=reports/ui-junit.xml -m ui
     
     - name: Upload UI test results
-      uses: actions/upload-artifact@v3
+      uses: actions/upload-artifact@v4
       if: always()
       with:
         name: ui-test-results
@@ -116,12 +116,12 @@ jobs:
     - uses: actions/checkout@v4
     
     - name: Set up Python
-      uses: actions/setup-python@v4
+      uses: actions/setup-python@v5
       with:
         python-version: '3.8'
     
     - name: Cache pip dependencies
-      uses: actions/cache@v3
+      uses: actions/cache@v4
       with:
         path: ~/.cache/pip
         key: ${{ runner.os }}-pip-${{ hashFiles('**/requirements.txt') }}
@@ -156,7 +156,7 @@ jobs:
         pytest tests/ -v --html=reports/combined-report.html --self-contained-html --junitxml=reports/combined-junit.xml --cov=. --cov-report=html:reports/coverage -n auto
     
     - name: Upload combined test results
-      uses: actions/upload-artifact@v3
+      uses: actions/upload-artifact@v4
       if: always()
       with:
         name: combined-test-results
@@ -170,19 +170,19 @@ jobs:
     
     steps:
     - name: Download API test results
-      uses: actions/download-artifact@v3
+      uses: actions/download-artifact@v4
       with:
         name: api-test-results
         path: api-results/
     
     - name: Download UI test results
-      uses: actions/download-artifact@v3
+      uses: actions/download-artifact@v4
       with:
         name: ui-test-results
         path: ui-results/
     
     - name: Download combined test results
-      uses: actions/download-artifact@v3
+      uses: actions/download-artifact@v4
       with:
         name: combined-test-results
         path: combined-results/
@@ -213,7 +213,7 @@ jobs:
         fi
     
     - name: Upload test summary
-      uses: actions/upload-artifact@v3
+      uses: actions/upload-artifact@v4
       with:
         name: test-summary
         path: test-summary.md
