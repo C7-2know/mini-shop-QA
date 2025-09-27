@@ -1,10 +1,10 @@
 # Core testing framework
 pytest
 pytest-html==4.1.1
-pytest-cov==6.0.0
-pytest-xdist==3.6.0
-pytest-playwright==0.7.1
-pytest-asyncio==0.24.0
+pytest-cov
+pytest-xdist
+pytest-playwright
+pytest-asyncio
 
 # API testing
 requests==2.32.5
