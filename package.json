@@ -1,0 +1,19 @@
+{
+  "name": "minishop-automation",
+  "version": "1.0.0",
+  "description": "A production-style automation suite for testing the MiniShop e-commerce application, featuring both UI and API testing with comprehensive reporting and CI/CD integration.",
+  "main": "playwright.config.js",
+  "directories": {
+    "doc": "docs",
+    "test": "tests"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependenciesgit ": {
+    "@playwright/test": "^1.55.1"
+  }
+}
